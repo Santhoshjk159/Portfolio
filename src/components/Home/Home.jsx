@@ -24,7 +24,7 @@ const Home = () => {
       <div className="relative z-20 w-full md:w-1/2 text-center md:text-left space-y-6 sm:space-y-8 md:space-y-10 flex flex-col items-center md:items-start">
         {/* Typewriter Effect */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
-          Hey, This is <span className="text-teal-400">Santhosh J K</span>
+          Hey, This is <span className="text-teal-400">Santhosh</span>
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-4xl font-medium">
           I am a{" "}

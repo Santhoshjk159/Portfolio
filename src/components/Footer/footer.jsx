@@ -103,7 +103,7 @@ const Footer = () => {
         <Column>
           <ColumnTitle>Quick Links</ColumnTitle>
           <Link href="/about">About Me</Link>
-          <Link href="/projects">Projects</Link>
+          <Link href="/myprojects">Projects</Link>
           <Link href="/contact">Contact Me</Link>
           <Link href="/skills">Skills</Link>
         </Column>

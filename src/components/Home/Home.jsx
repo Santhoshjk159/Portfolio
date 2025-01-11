@@ -32,9 +32,10 @@ const Home = () => {
             <Typewriter
               words={[
                 "Web-Developer 💻",
-                "Java Programmer 👨‍💻",
+                "Java Programmer ⚙️",
                 "Biotechnology Enthusiast 🔬",
                 "UG @ NIT-AP 👨‍🎓",
+                "Freelancer 🧑‍💻",
               ]}
               loop={true}
               cursor

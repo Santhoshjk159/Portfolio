@@ -111,8 +111,11 @@ const Footer = () => {
         {/* Column 2 */}
         <Column>
           <ColumnTitle>Contact</ColumnTitle>
-          <p>Email: jksanthosh159@gmail.com</p>
-          <p>Location: Trichy,Tamilnadu,India</p>
+          <h2>
+            Mail : 
+            <a href="mailto:jksanthosh159@gmail.com"> jksanthosh159@gmail.com</a>
+          </h2>
+          <p>Location: Trichy ,Tamilnadu,India</p>
         </Column>
 
         {/* Column 3 */}

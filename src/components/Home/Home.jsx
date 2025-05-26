@@ -11,11 +11,11 @@ const Home = () => {
 
       {/* Photo Section */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-start md:pl-16 xl:pl-32 mb-8 md:mb-0">
-        <div className="w-56 h-72 sm:w-64 sm:h-80 md:w-96 md:h-[28rem] xl:w-[30rem] xl:h-[32rem] bg-gradient-to-b from-transparent to-gray-900 rounded-xl overflow-hidden shadow-2xl relative">
+        <div className="w-64 h-80 sm:w-72 sm:h-96 md:w-[28rem] md:h-[32rem] xl:w-[34rem] xl:h-[36rem] bg-gradient-to-b from-transparent to-gray-900 rounded-xl overflow-hidden shadow-2xl relative">
           <img
             src={photo}
             alt="Santhosh"
-            className="object-cover w-full h-full mix-blend-lighten" // Makes the photo blend with the background
+            className="object-contain w-full h-full mix-blend-lighten"
           />
         </div>
       </div>
@@ -33,9 +33,9 @@ const Home = () => {
               words={[
                 "Web-Developer 💻",
                 "Java Programmer ⚙️",
-                "Biotechnology Enthusiast 🔬",
+                "Biotechnology Alchemist 🔬",
                 "UG @ NIT-AP 👨‍🎓",
-                "Freelancer 🧑‍💻",
+                "AI/ML Enthusiast 🧑‍💻",
               ]}
               loop={true}
               cursor

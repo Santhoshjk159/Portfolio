@@ -364,19 +364,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <div
-        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-        }`}
-        style={{ transitionDelay: "1.4s" }}
-      >
-        <div
-          className={`p-2 ${colors.card} rounded-full ${colors.border} backdrop-blur-sm animate-bounce hover:scale-110 transition-transform duration-300`}
-        >
-          <ChevronDown className={`w-5 h-5 ${colors.textMuted}`} />
-        </div>
-      </div>
+      
     </section>
   );
 };

@@ -11,10 +11,11 @@ import {
 import Layout from "./layout.jsx";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
-import MyProjects from "./components/MyProjects/MyProjects.jsx"
-import Contact from "./components/Contact/Contact.jsx"
+import MyProjects from "./components/MyProjects/MyProjects.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 import Experience from "./components/Experience/Experience.jsx";
 import Skills from "./components/Skills/Skills.jsx";
+import { ThemeProvider } from "./contexts/ThemeContext.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +33,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );

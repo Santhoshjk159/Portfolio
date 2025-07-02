@@ -1,136 +1,604 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  GraduationCap,
+  Briefcase,
+  Users,
+  Calendar,
+  MapPin,
+  Trophy,
+  Building,
+  ChevronRight,
+  Star,
+  Award,
+  Code,
+  Target,
+  Zap,
+} from "lucide-react";
+import { useTheme } from "../../contexts/ThemeContext";
+import cauvery from "../asset/cauvery.png"
 
 function Experience() {
-  return (
-    <div>
-      {/* Experience Section */}
-      <div className="bg-gray-900 text-gray-100 py-16 px-6 pt-24">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-100">
-          Education
-        </h2>
+  const { isDark, colors } = useTheme();
+  const [activeSection, setActiveSection] = useState("all");
 
-        {/* College Experience */}
-        <div className="flex flex-col md:flex-row items-center bg-gray-800 rounded-2xl shadow-xl overflow-hidden mb-12 p-6 md:p-8 transition-transform transform hover:scale-105">
-          {/* College Logo */}
-          <div className="w-24 h-24 md:w-32 md:h-32 mb-4 md:mb-0 md:mr-6">
-            <img
-              src="https://nitandhra.ac.in/main/images/logo.png"
-              alt="College Logo"
-              className="w-full h-full object-contain rounded-full shadow-md"
-            />
-          </div>
-          {/* College Details */}
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-teal-400 mb-2">
-              NIT Andhra Pradesh{" "}
-              <span className="text-gray-400 text-sm block md:inline">
-                (Aug 2023 - May 2027)
-              </span>
-            </h2>
-            <h3 className="text-gray-400 text-xl mb-2">
-              B.Tech in Biotechnology with a Minor in Software Engineering
-            </h3>
-            <p className="text-gray-400 mt-2 mb-4">CGPA: 8.53/10</p>
-            <p className="text-gray-300 mt-2 text-sm md:text-base leading-relaxed">
-              Combining a strong foundation in Biotechnology with a specialized
-              minor in Software Engineering, focusing on programming,
-              algorithms, and software development. This interdisciplinary
-              curriculum equips me with technical expertise and problem-solving
-              skills, aligning with roles in software development.
-            </p>
-          </div>
+  const education = [
+    {
+      institution: "NIT Andhra Pradesh",
+      degree: "B.Tech in Biotechnology",
+      type: "Major",
+      duration: "Aug 2023 - May 2027",
+      cgpa: "8.53/10",
+      logo: "https://nitandhra.ac.in/main/images/logo.png",
+      description:
+        "Strong foundation in Biotechnology with focus on biological sciences, research methodologies, and biotechnological applications.",
+      color: "from-emerald-500 to-teal-600",
+    },
+    {
+      institution: "NIT Andhra Pradesh",
+      degree: "Minor in Software Engineering",
+      type: "Minor",
+      duration: "Aug 2023 - May 2027",
+      cgpa: "8.53/10",
+      logo: "https://nitandhra.ac.in/main/images/logo.png",
+      description:
+        "Specialized training in programming, algorithms, software development, and modern web technologies.",
+      color: "from-blue-500 to-indigo-600",
+    },
+    {
+      institution: "Cauvery Global Senior Secondary School",
+      degree: "Class XII",
+      type: "HSC",
+      cgpa: "88.2%",
+      logo: cauvery,
+      description:
+        "Built a strong foundation in mathematics, physics, and chemistry with consistent academic performance.",
+      color: "from-yellow-500 to-orange-600",
+    },
+    {
+      institution: "Mahatma Gandhi Centenary Vidyalaya",
+      degree: "Class X",
+      type: "SSC",
+      cgpa: "91.2%",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0oUwHDef5WHVcJs0WzLzgpnaa_OmEfE9Eyg&s",
+      description:
+        "Achieved academic excellence across core subjects with a focus on conceptual understanding.",
+      color: "from-pink-700 to-red-800",
+    },
+  ];
+
+  const workExperience = {
+    company: "VDart Inc.",
+    role: "Web Development Intern",
+    type: "On-site",
+    duration: "May 2025 - June 2025",
+    logo: "https://www.vdart.com/wp-content/uploads/2020/02/vdart.svg",
+    achievements: [
+      "Designed and developed internal web applications and dashboards to improve operations, enhance data visibility, and reduce reporting time by 40%, supporting faster decision-making.",
+      "Identified workflow inefficiencies and contributed to internal tool development that improved process transparency, streamlined operations, and boosted productivity.",
+    ],
+    skills: [
+      "React.js",
+      "Dashboard Development",
+      "Workflow Automation",
+      "Responsive Design",
+      "Data Visualization",
+    ],
+    color: "from-blue-500 to-indigo-600",
+  };
+
+  const positionsOfResponsibility = [
+    {
+      id: 1,
+      organization: "Google Developer Group (GDG)",
+      role: "Executive Member, Graphics Team",
+      logo: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F336108949%2F406395333387%2F1%2Foriginal.20220816-061514?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=304%2C0%2C1276%2C1276&s=5c743ea90a8e6940d28c9759069f277e",
+      description:
+        "Creating visually engaging content for events and promotions, including video content and digital marketing materials.",
+      skills: [
+        "Graphic Design",
+        "Video Editing",
+        "Event Promotion",
+      ],
+      color: "from-blue-500 to-indigo-600",
+    },
+    {
+      id: 2,
+      organization: "Innovation & Entrepreneurship Cell, NIT AP",
+      role: "Executive Member, Technical Team",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJskiyn62Hp65-fTyfcvBS5olXlAusUgwIag&s",
+      description:
+        "Developing innovative tech prototypes and participating in national tech competitions to showcase projects.",
+      skills: [
+        "Technical Development",
+        "Event Management",
+      ],
+      color: "from-emerald-500 to-teal-600",
+    },
+    {
+      id: 3,
+      organization: "Biotechnology Engineering Association (BEA)",
+      role: "Executive Member, Core Team",
+      logo: "https://ugc.production.linktr.ee/7722bba3-e436-4480-9fc3-c6e89fdfce3b_Untitled-design.png?io=true&size=avatar-v3_0",
+      description:
+        "Designing digital content for events and managing social media platforms to enhance the association's digital footprint.",
+      skills: [
+        "Content Creation",
+        "Promtotions",
+        "Brand Design",
+      ],
+      color: "from-purple-500 to-pink-600",
+    },
+  ];
+
+  return (
+    <section
+      id="experience"
+      className={`${colors.background} ${colors.text} min-h-screen pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 transition-all duration-500`}
+    >
+      <div className="max-w-7xl mx-auto w-full">
+        {/* Hero Section Header - Compact */}
+        <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+          <h1
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r ${colors.primary} bg-clip-text text-transparent mb-4 leading-tight`}
+          >
+            MY JOURNEY
+          </h1>
+          <div
+            className={`w-24 sm:w-32 h-1 bg-gradient-to-r ${colors.primary} mx-auto rounded-full mb-4`}
+          ></div>
+          <p
+            className={`${colors.textSecondary} text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-4`}
+          >
+            From biotechnology student to web developer - exploring the
+            intersection of
+            <span className="text-emerald-400 font-semibold"> science </span>
+            and
+            <span className="text-purple-400 font-semibold"> technology</span>
+          </p>
         </div>
 
-        {/* Volunteering Experience */}
-        <h3 className="text-4xl font-semibold text-center mb-12">
-          Volunteering Experience
-        </h3>
+        {/* Filter Tabs - Compact */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+          {[
+            { id: "all", label: "All", icon: Star },
+            { id: "education", label: "Education", icon: GraduationCap },
+            { id: "work", label: "Work", icon: Briefcase },
+            { id: "leadership", label: "Positions", icon: Users },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveSection(tab.id)}
+              className={`group flex items-center space-x-2 px-3 sm:px-4 py-2 rounded-xl font-semibold transition-all duration-500 transform hover:scale-105 text-sm sm:text-base ${
+                activeSection === tab.id
+                  ? `bg-gradient-to-r ${colors.primary} text-white shadow-lg shadow-emerald-500/30`
+                  : `${colors.card} ${colors.border} ${colors.text} hover:${colors.cardHover} shadow-md`
+              }`}
+            >
+              <tab.icon className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
+              <span>{tab.label}</span>
+            </button>
+          ))}
+        </div>
 
-        <div className="space-y-10">
-          {/* Volunteering 1 */}
-          <div className="flex flex-col sm:flex-row items-center bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-            {/* Logo */}
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mb-4 sm:mb-0 sm:mr-6">
-              <img
-                src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F336108949%2F406395333387%2F1%2Foriginal.20220816-061514?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=304%2C0%2C1276%2C1276&s=5c743ea90a8e6940d28c9759069f277e"
-                alt="Volunteer 1 Logo"
-                className="w-full h-full object-contain rounded-full shadow-md"
-              />
-            </div>
-            {/* Volunteering Details */}
-            <div className="text-center sm:text-left">
-              <h4 className="text-xl font-semibold text-teal-400">
-                Google Developer Group (GDG)
-              </h4>
-              <p className="text-gray-400 text-lg">
-                Executive Member, Graphics and Designing Team
-              </p>
-              <p className="text-gray-400 mt-2 text-sm md:text-base leading-relaxed">
-                Working as a part of the graphics team, creating visually
-                engaging content for events and promotions, including video
-                content.
-              </p>
-            </div>
-          </div>
+        {/* Content Sections - Optimized Layout */}
+        <div className="space-y-6 sm:space-y-8">
+          {/* Education Section */}
+          {(activeSection === "all" || activeSection === "education") && (
+            <div className="animate-slide-up">
+              <div className="flex items-center justify-center mb-4 sm:mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-emerald-500/20 blur-lg rounded-full animate-pulse"></div>
+                    <GraduationCap className="relative w-5 h-5 sm:w-6 sm:h-6 text-emerald-400" />
+                  </div>
+                  <h2
+                    className={`text-xl sm:text-2xl lg:text-3xl font-bold ${colors.text} bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent`}
+                  >
+                    EDUCATION
+                  </h2>
+                </div>
+              </div>
 
-          {/* Volunteering 2 */}
-          <div className="flex flex-col sm:flex-row items-center bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-            {/* Logo */}
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mb-4 sm:mb-0 sm:mr-6">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJskiyn62Hp65-fTyfcvBS5olXlAusUgwIag&s"
-                alt="Volunteer 2 Logo"
-                className="w-full h-full object-contain rounded-full shadow-md"
-              />
-            </div>
-            {/* Volunteering Details */}
-            <div className="text-center sm:text-left">
-              <h4 className="text-xl font-semibold text-teal-400">
-                Innovation & Entrepreneurship Cell, NIT Andhra Pradesh
-              </h4>
-              <p className="text-gray-400 text-lg">
-                Executive Member, Technical Team
-              </p>
-              <p className="text-gray-400 mt-2 text-sm md:text-base leading-relaxed">
-                Collaborate with peers to develop innovative tech prototypes,
-                focusing on emerging technologies and building functional
-                models. Actively participate in national tech competitions to
-                showcase projects and gain valuable exposure.
-              </p>
-            </div>
-          </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                {education.map((edu, index) => (
+                  <div
+                    key={index}
+                    className={`group ${colors.card} ${colors.border} rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-2 animate-slide-up overflow-hidden relative`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {/* Background decoration */}
+                    <div
+                      className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${edu.color} opacity-5 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700`}
+                    ></div>
 
-          {/* Volunteering 3 */}
-          <div className="flex flex-col sm:flex-row items-center bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-            {/* Logo */}
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mb-4 sm:mb-0 sm:mr-6">
-              <img
-                src="https://ugc.production.linktr.ee/7722bba3-e436-4480-9fc3-c6e89fdfce3b_Untitled-design.png?io=true&size=avatar-v3_0"
-                alt="Volunteer 3 Logo"
-                className="w-full h-full object-contain rounded-full shadow-md"
-              />
+                    <div className="relative z-10">
+                      <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-4 mb-4">
+                        <div className="flex-shrink-0">
+                          <div className="relative group/logo">
+                            <div
+                              className={`absolute -inset-1 bg-gradient-to-r ${edu.color} opacity-20 blur-md rounded-full group-hover/logo:opacity-40 transition-opacity duration-500`}
+                            ></div>
+                            <div
+                              className={`relative w-16 h-16 sm:w-18 sm:h-18 ${colors.surface} rounded-full p-3 shadow-lg ${colors.border} group-hover/logo:rotate-12 transition-transform duration-500 flex items-center justify-center overflow-hidden`}
+                            >
+                              <img
+                                src={edu.logo}
+                                alt="NIT Andhra Pradesh"
+                                className="w-full h-full object-contain rounded-full"
+                                onError={(e) => {
+                                  e.target.onerror = null;
+                                  e.target.style.display = "none";
+                                  e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center text-emerald-400 font-bold text-xl">NIT</div>`;
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex-1 space-y-2">
+                          <h3
+                            className={`text-lg sm:text-xl font-bold ${colors.text} group-hover:text-emerald-400 transition-colors duration-300`}
+                          >
+                            {edu.institution}
+                          </h3>
+                          <p
+                            className={`text-sm sm:text-base font-semibold ${colors.textSecondary} group-hover:${colors.text} transition-colors duration-300`}
+                          >
+                            {edu.degree}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="space-y-3 text-center sm:text-left">
+                        <p
+                          className={`${colors.textSecondary} text-sm leading-relaxed group-hover:${colors.text} transition-colors duration-300`}
+                        >
+                          {edu.description}
+                        </p>
+
+                        <div className="flex flex-wrap justify-center sm:justify-start gap-4 text-xs">
+                          {edu.duration && (
+                            <div
+                              className={`flex items-center space-x-2 ${colors.textMuted} group-hover:text-emerald-400 transition-colors duration-300`}
+                            >
+                              <Calendar className="w-4 h-4" />
+                              <span className="font-medium">{edu.duration}</span>
+                            </div>
+                          )}
+                          <div
+                            className={`flex items-center space-x-2 ${colors.textMuted} group-hover:text-emerald-400 transition-colors duration-300`}
+                          >
+                            <Trophy className="w-4 h-4" />
+                            <span className="font-medium">
+                              Grades: {edu.cgpa}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            {/* Volunteering Details */}
-            <div className="text-center sm:text-left">
-              <h4 className="text-xl font-semibold text-teal-400">
-                Biotechnology Engineering Association (BEA), NIT Andhra Pradesh
-              </h4>
-              <p className="text-gray-400 text-lg">
-                Executive Member, Core Team
-              </p>
-              <p className="text-gray-400 mt-2 text-sm md:text-base leading-relaxed">
-                Design and develop eye-catching posters and digital content for
-                events, ensuring uniform branding and clear communication.
-                Manage social media platforms through content planning and
-                interaction to enhance the association’s digital footprint.
-                Promote events through focused campaigns, resulting in increased
-                student involvement and engagement.
-              </p>
+          )}
+
+          {/* Work Experience Section */}
+          {(activeSection === "all" || activeSection === "work") && (
+            <div className="animate-slide-up">
+              <div className="flex items-center justify-center mb-4 sm:mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-blue-500/20 blur-lg rounded-full animate-pulse"></div>
+                    <Briefcase className="relative w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
+                  </div>
+                  <h2
+                    className={`text-xl sm:text-2xl lg:text-3xl font-bold ${colors.text} bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent`}
+                  >
+                    PROFESSIONAL EXPERIENCE
+                  </h2>
+                </div>
+              </div>
+
+              <div
+                className={`group ${colors.card} ${colors.border} rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-2 animate-slide-up overflow-hidden relative`}
+              >
+                {/* Background decoration */}
+                <div
+                  className={`absolute top-0 left-0 w-32 h-32 bg-gradient-to-br ${workExperience.color} opacity-5 rounded-full -translate-y-16 -translate-x-16 group-hover:scale-150 transition-transform duration-700`}
+                ></div>
+
+                <div className="relative z-10">
+                  <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left space-y-4 lg:space-y-0 lg:space-x-6 mb-6">
+                    <div className="flex-shrink-0">
+                      <div className="relative group/logo">
+                        <div
+                          className={`absolute -inset-2 bg-gradient-to-r ${workExperience.color} opacity-20 blur-lg rounded-2xl group-hover/logo:opacity-40 transition-opacity duration-500`}
+                        ></div>
+                        <div
+                          className={`relative w-18 h-18 sm:w-20 sm:h-20 ${
+                            isDark ? "bg-white" : "bg-gray-50"
+                          } rounded-2xl p-3 shadow-xl ${
+                            colors.border
+                          } group-hover/logo:rotate-6 transition-transform duration-500 flex items-center justify-center overflow-hidden`}
+                        >
+                          <img
+                            src={workExperience.logo}
+                            alt="VDart Inc."
+                            className="w-full h-full object-contain"
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.style.display = "none";
+                              e.target.parentElement.innerHTML =
+                                '<div class="w-full h-full flex items-center justify-center text-blue-400 font-bold text-xl">V</div>';
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex-1 space-y-3">
+                      <div>
+                        <h3
+                          className={`text-xl sm:text-2xl font-bold ${colors.text} mb-2 group-hover:text-blue-400 transition-colors duration-300`}
+                        >
+                          {workExperience.company}
+                        </h3>
+                        <div
+                          className={`inline-block px-4 py-2 bg-gradient-to-r ${workExperience.color} text-white text-sm font-bold rounded-full mb-3`}
+                        >
+                          {workExperience.role}
+                        </div>
+
+                        <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
+                          <div
+                            className={`flex items-center space-x-2 ${colors.textMuted} group-hover:text-blue-400 transition-colors duration-300`}
+                          >
+                            <Calendar className="w-4 h-4" />
+                            <span className="font-medium">
+                              {workExperience.duration}
+                            </span>
+                          </div>
+                          <div
+                            className={`flex items-center space-x-2 ${colors.textMuted} group-hover:text-blue-400 transition-colors duration-300`}
+                          >
+                            <MapPin className="w-4 h-4" />
+                            <span className="font-medium">
+                              {workExperience.type}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Key Achievements - Compact */}
+                  <div className="space-y-4 mb-6">
+                    <h4
+                      className={`text-base font-bold ${colors.text} flex items-center space-x-2`}
+                    >
+                      <Target className="w-4 h-4 text-yellow-400" />
+                      <span>Key Achievements</span>
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {workExperience.achievements.map((achievement, index) => (
+                        <div
+                          key={index}
+                          className={`${colors.surface} ${colors.border} rounded-xl p-3 hover:${colors.cardHover} transition-all duration-300 group/achievement`}
+                        >
+                          <div className="flex items-start space-x-2">
+                            <div className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mt-1.5 flex-shrink-0 group-hover/achievement:scale-150 transition-transform duration-300"></div>
+                            <p
+                              className={`${colors.textSecondary} text-sm leading-relaxed group-hover/achievement:${colors.text} transition-colors duration-300 line-clamp-3`}
+                            >
+                              {achievement}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Skills Used - Compact */}
+                  <div className="space-y-3">
+                    <h4
+                      className={`text-base font-bold ${colors.text} flex items-center space-x-2`}
+                    >
+                      <Code className="w-4 h-4 text-emerald-400" />
+                      <span>Technologies Used</span>
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {workExperience.skills.map((skill, index) => (
+                        <span
+                          key={index}
+                          className={`px-3 py-1 ${colors.surfaceVariant} ${colors.textSecondary} rounded-full text-xs font-semibold hover:${colors.cardHover} hover:scale-110 transition-all duration-300 shadow-sm hover:shadow-md`}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Positions Section */}
+          {(activeSection === "all" || activeSection === "leadership") && (
+            <div className="animate-slide-up">
+              <div className="flex items-center justify-center mb-4 sm:mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-purple-500/20 blur-lg rounded-full animate-pulse"></div>
+                    <Users className="relative w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
+                  </div>
+                  <h2
+                    className={`text-xl sm:text-2xl lg:text-3xl font-bold ${colors.text} bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent`}
+                  >
+                    POSITIONS OF RESPONSIBILITY
+                  </h2>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+                {positionsOfResponsibility.map((pos, index) => (
+                  <div
+                    key={pos.id}
+                    className={`group ${colors.card} ${colors.border} rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-2 animate-slide-up overflow-hidden relative`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {/* Background decoration */}
+                    <div
+                      className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${pos.color} opacity-10 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700`}
+                    ></div>
+
+                    <div className="relative z-10 space-y-4">
+                      <div className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-3">
+                        <div className="flex-shrink-0">
+                          <div className="relative group/logo">
+                            <div
+                              className={`absolute -inset-1 bg-gradient-to-r ${pos.color} opacity-20 blur-md rounded-full group-hover/logo:opacity-40 transition-opacity duration-300`}
+                            ></div>
+                            <div
+                              className={`relative w-14 h-14 sm:w-16 sm:h-16 ${colors.surface} rounded-full p-2.5 shadow-lg ${colors.border} group-hover/logo:rotate-12 transition-transform duration-300 flex items-center justify-center overflow-hidden`}
+                            >
+                              <img
+                                src={pos.logo}
+                                alt={pos.organization}
+                                className="w-full h-full object-cover rounded-full"
+                                onError={(e) => {
+                                  e.target.onerror = null;
+                                  e.target.style.display = "none";
+                                  e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center text-purple-400 font-bold text-lg bg-gradient-to-r ${
+                                    pos.color
+                                  } bg-opacity-20 rounded-full">${pos.organization.charAt(
+                                    0
+                                  )}</div>`;
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex-1">
+                          <h3
+                            className={`text-base sm:text-lg font-bold ${colors.text} mb-2 leading-tight group-hover:text-purple-400 transition-colors duration-300`}
+                          >
+                            {pos.organization}
+                          </h3>
+                          <div
+                            className={`inline-block px-3 py-1 bg-gradient-to-r ${pos.color} text-white text-xs font-bold rounded-full`}
+                          >
+                            {pos.role}
+                          </div>
+                        </div>
+                      </div>
+
+                      <p
+                        className={`${colors.textSecondary} text-sm leading-relaxed group-hover:${colors.text} transition-colors duration-300 text-center sm:text-left`}
+                      >
+                        {pos.description}
+                      </p>
+
+                      <div className="space-y-2">
+                        <div
+                          className={`text-sm font-semibold ${colors.text} flex items-center justify-center sm:justify-start space-x-2`}
+                        >
+                          <Zap className="w-4 h-4 text-yellow-400" />
+                          <span>Key Skills</span>
+                        </div>
+                        <div className="flex flex-wrap justify-center sm:justify-start gap-2">
+                          {pos.skills.slice(0, 3).map((skill, skillIndex) => (
+                            <span
+                              key={skillIndex}
+                              className={`px-2 py-1 ${colors.surfaceVariant} ${colors.textSecondary} rounded-full text-xs font-medium hover:${colors.cardHover} transition-colors duration-300`}
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                          {pos.skills.length > 3 && (
+                            <span
+                              className={`px-2 py-1 ${colors.textMuted} text-xs`}
+                            >
+                              +{pos.skills.length - 3}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Call to Action - Compact */}
+        <div
+          className={`mt-8 sm:mt-12 ${colors.card} ${colors.border} p-6 sm:p-8 rounded-2xl sm:rounded-3xl backdrop-blur-xl text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-slide-up relative overflow-hidden`}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-purple-500/5 to-blue-500/5 rounded-2xl sm:rounded-3xl"></div>
+
+          <div className="relative z-10">
+            <div className="flex justify-center mb-4">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-purple-400 opacity-20 blur-lg rounded-full animate-pulse"></div>
+                <Award className="relative w-8 h-8 sm:w-12 sm:h-12 text-emerald-400" />
+              </div>
+            </div>
+
+            <h3
+              className={`text-xl sm:text-2xl lg:text-3xl font-bold ${colors.text} mb-3 bg-gradient-to-r ${colors.primary} bg-clip-text text-transparent`}
+            >
+              READY TO CREATE IMPACT
+            </h3>
+            <p
+              className={`${colors.textSecondary} mb-6 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed px-4`}
+            >
+              Combining{" "}
+              <span className="text-emerald-400 font-semibold">
+                technical expertise
+              </span>
+              ,
+              <span className="text-blue-400 font-semibold">
+                {" "}
+                professional experience
+              </span>
+              , and
+              <span className="text-purple-400 font-semibold">
+                {" "}
+                leadership skills
+              </span>{" "}
+              to drive innovation.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <a
+                href="/myprojects"
+                className={`group px-6 sm:px-8 py-3 bg-gradient-to-r ${colors.primary} text-white font-bold rounded-xl hover:from-emerald-600 hover:to-cyan-600 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer`}
+              >
+                <span>Explore My Projects</span>
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+              <a
+                href="/contact"
+                className={`group px-6 sm:px-8 py-3 ${
+                  isDark ? "bg-slate-800/90" : "bg-gray-200/90"
+                } backdrop-blur-sm ${colors.text} font-bold rounded-xl hover:${
+                  isDark ? "bg-slate-700/90" : "bg-gray-300/90"
+                } transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 ${
+                  isDark
+                    ? "border border-slate-600 hover:border-emerald-400"
+                    : "border border-gray-300 hover:border-emerald-400"
+                } shadow-lg flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer`}
+              >
+                <span>Let's Connect</span>
+                <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

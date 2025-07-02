@@ -6,7 +6,7 @@ import pythonIcon from "../asset/icon/python.gif";
 import jsIcon from "../asset/icon/js.gif";
 import htmlIcon from "../asset/icon/html.png";
 import cssIcon from "../asset/icon/css.png";
-import reactIcon from "../asset/icon/react.gif";
+import reactIcon from "../asset/icon/react.png";
 import tailwindIcon from "../asset/icon/tailwind.png";
 import numpyIcon from "../asset/icon/np.png";
 import pandasIcon from "../asset/icon/pandas.png";

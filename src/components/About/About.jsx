@@ -165,7 +165,7 @@ const About = () => {
               </a>
 
               <a
-                href="#myprojects"
+                href="/myprojects"
                 className={`group relative overflow-hidden px-5 sm:px-6 py-2.5 sm:py-3 ${
                   isDark ? "bg-slate-800/90" : "bg-gray-200/90"
                 } backdrop-blur-sm ${
@@ -212,13 +212,13 @@ const About = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a
-                href="#contact"
+                href="/contact"
                 className={`px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r ${colors.primary} text-white font-bold rounded-xl hover:from-emerald-600 hover:to-cyan-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-emerald-500/30 text-sm sm:text-base`}
               >
                 Get In Touch
               </a>
               <a
-                href="#experience"
+                href="/experience"
                 className={`px-5 sm:px-6 py-2.5 sm:py-3 ${
                   isDark ? "bg-slate-800/90" : "bg-gray-200/90"
                 } backdrop-blur-sm ${

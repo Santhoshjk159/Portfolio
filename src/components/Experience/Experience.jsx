@@ -37,8 +37,8 @@ function Experience() {
       institution: "NIT Andhra Pradesh",
       degree: "Minor in Software Engineering",
       type: "Minor",
-      duration: "Aug 2023 - May 2027",
-      cgpa: "8.53/10",
+      duration: "Jan 2025 - May 2027",
+      cgpa: "10/10",
       logo: "https://nitandhra.ac.in/main/images/logo.png",
       description:
         "Specialized training in programming, algorithms, software development, and modern web technologies.",
@@ -78,10 +78,10 @@ function Experience() {
     ],
     skills: [
       "React.js",
-      "Dashboard Development",
-      "Workflow Automation",
-      "Responsive Design",
-      "Data Visualization",
+      "Node.js",
+      "PHP",
+      "Tailwind CSS",
+      "MySQL",
     ],
     color: "from-blue-500 to-indigo-600",
   };

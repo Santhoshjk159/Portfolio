@@ -27,7 +27,7 @@ function Experience() {
       degree: "B.Tech in Biotechnology",
       type: "Major",
       duration: "Aug 2023 - May 2027",
-      cgpa: "8.53/10",
+      cgpa: "8.74/10",
       logo: "https://nitandhra.ac.in/main/images/logo.png",
       description:
         "Strong foundation in Biotechnology with focus on biological sciences, research methodologies, and biotechnological applications.",

@@ -17,16 +17,16 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", link: "/" },
-    { label: "About Me", link: "/about" },
-    { label: "My Works", link: "/myprojects" },
-    { label: "Education & Experience", link: "/experience" },
-    { label: "Skills & Certifications", link: "/skills" },
+    { label: "Home", link: "#home" },
+    { label: "About Me", link: "#about" },
+    { label: "My Works", link: "#myprojects" },
+    { label: "Education & Experience", link: "#experience" },
+    { label: "Skills & Certifications", link: "#skills" },
   ];
 
   const mobileNavItems = [
     ...navItems,
-    { label: "Contact Me", link: "/contact" },
+    { label: "Contact Me", link: "#contact" },
   ];
 
   return (
@@ -48,7 +48,7 @@ const Header = () => {
         <h1
           className={`text-xl lg:text-2xl font-bold bg-gradient-to-r ${colors.primary} text-transparent bg-clip-text hover:scale-105 transition-transform duration-300`}
         >
-          <a href="/">Santhosh Portfolio</a>
+          <a href="#home">Santhosh Portfolio</a>
         </h1>
 
         {/* Desktop Navigation */}
@@ -93,7 +93,7 @@ const Header = () => {
               isDark ? "text-white" : "text-white"
             } font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25`}
           >
-            <a href="/contact">Let's Connect!</a>
+            <a href="#contact">Let's Connect!</a>
           </button>
         </div>
 

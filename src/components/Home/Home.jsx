@@ -61,6 +61,7 @@ const Home = () => {
 
   return (
     <section
+      id="home"
       className={`relative ${
         isDark
           ? "bg-gradient-to-br from-gray-950 via-slate-950 to-gray-950"
@@ -213,7 +214,7 @@ const Home = () => {
               style={{ transitionDelay: "1s" }}
             >
               <a
-                href="/myprojects"
+                href="#myprojects"
                 className={`group relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r ${colors.primary} text-white font-semibold rounded-2xl hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/25`}
               >
                 <span className="relative z-10 flex items-center justify-center space-x-2">
@@ -224,7 +225,7 @@ const Home = () => {
               </a>
 
               <a
-                href="/contact"
+                href="#contact"
                 className={`group relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 ${
                   isDark ? "bg-slate-800/50" : "bg-white/50"
                 } backdrop-blur-sm ${

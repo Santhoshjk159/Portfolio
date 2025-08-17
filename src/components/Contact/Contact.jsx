@@ -110,6 +110,7 @@ const ContactMe = () => {
 
   return (
     <section
+      id="contact"
       className={`${colors.background} ${colors.text} min-h-screen flex items-center py-16 px-4 sm:px-6 lg:px-8 transition-all duration-500`}
     >
       <div className="max-w-7xl mx-auto w-full">
@@ -341,13 +342,13 @@ const ContactMe = () => {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="/myprojects"
+              href="#myprojects"
               className={`px-6 py-3 bg-gradient-to-r ${colors.primary} text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25`}
             >
               View My Work
             </a>
             <a
-              href="/about"
+              href="#about"
               className={`px-6 py-3 ${
                 isDark ? "bg-slate-800/80" : "bg-gray-200/80"
               } backdrop-blur-sm ${

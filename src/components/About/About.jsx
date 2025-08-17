@@ -165,12 +165,10 @@ const About = () => {
               </a>
 
               <a
-                href="/myprojects"
+                href="#myprojects"
                 className={`group relative overflow-hidden px-5 sm:px-6 py-2.5 sm:py-3 ${
                   isDark ? "bg-slate-800/90" : "bg-gray-200/90"
-                } backdrop-blur-sm ${
-                  colors.text
-                } font-bold rounded-xl hover:${
+                } backdrop-blur-sm ${colors.text} font-bold rounded-xl hover:${
                   isDark ? "bg-slate-700/90" : "bg-gray-300/90"
                 } transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 ${
                   isDark
@@ -186,52 +184,6 @@ const About = () => {
                       : "from-emerald-600/20 to-cyan-600/20"
                   } transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-xl`}
                 ></div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Compact Call to Action */}
-        <div
-          className={`${colors.card} ${colors.border} p-5 sm:p-6 lg:p-7 rounded-2xl backdrop-blur-xl text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 relative overflow-hidden`}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-purple-500/5 to-blue-500/5 rounded-2xl"></div>
-          
-          <div className="relative z-10">
-            <h3
-              className={`text-lg sm:text-xl lg:text-2xl font-bold ${colors.text} mb-3 sm:mb-4 bg-gradient-to-r ${colors.primary} bg-clip-text text-transparent`}
-            >
-              Let's Create Something Amazing Together
-            </h3>
-            <p
-              className={`${colors.textSecondary} mb-4 sm:mb-6 max-w-xl mx-auto text-sm sm:text-base leading-relaxed`}
-            >
-              Ready to bring innovative ideas to life through the perfect blend of
-              technology and creativity.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <a
-                href="/contact"
-                className={`px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r ${colors.primary} text-white font-bold rounded-xl hover:from-emerald-600 hover:to-cyan-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-emerald-500/30 text-sm sm:text-base`}
-              >
-                Get In Touch
-              </a>
-              <a
-                href="/experience"
-                className={`px-5 sm:px-6 py-2.5 sm:py-3 ${
-                  isDark ? "bg-slate-800/90" : "bg-gray-200/90"
-                } backdrop-blur-sm ${
-                  colors.text
-                } font-bold rounded-xl hover:${
-                  isDark ? "bg-slate-700/90" : "bg-gray-300/90"
-                } transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 ${
-                  isDark
-                    ? "border border-slate-600 hover:border-emerald-400"
-                    : "border border-gray-300 hover:border-emerald-400"
-                } shadow-lg text-sm sm:text-base`}
-              >
-                View Experience
               </a>
             </div>
           </div>

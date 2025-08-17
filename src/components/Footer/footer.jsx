@@ -123,12 +123,6 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-              <a
-                href="/contact"
-                className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${colors.primary} text-white text-sm font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105`}
-              >
-                Let's Work Together
-              </a>
             </div>
           </div>
         </div>

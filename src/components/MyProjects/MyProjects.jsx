@@ -75,7 +75,8 @@ function MyProjects() {
   ];
 
   return (
-    <div
+    <section
+      id="myprojects"
       className={`${colors.background} ${colors.text} transition-all duration-500 min-h-screen pt-24 sm:pt-28 lg:pt-32 pb-8`}
     >
       {/* Hero Section - More Compact */}
@@ -283,46 +284,8 @@ function MyProjects() {
         </div>
       </section>
 
-      {/* CTA Section - More Compact */}
-      <div className={`${colors.card} ${colors.border} border-t py-8`}>
-        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h3 className={`text-xl sm:text-2xl font-bold ${colors.text} mb-3`}>
-            Let's Work Together
-          </h3>
-          <p
-            className={`${colors.textSecondary} mb-6 max-w-xl mx-auto text-sm`}
-          >
-            Ready to bring your ideas to life? Let's create something amazing
-            together.
-          </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="/contact"
-              className={`px-6 py-3 bg-gradient-to-r ${colors.primary} text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25 text-sm`}
-            >
-              Start a Project
-            </a>
-            <a
-              href="/about"
-              className={`px-6 py-3 ${
-                isDark ? "bg-slate-800/80" : "bg-gray-200/80"
-              } backdrop-blur-sm ${
-                colors.text
-              } font-semibold rounded-lg hover:${
-                isDark ? "bg-slate-700/80" : "bg-gray-300/80"
-              } transition-all duration-300 transform hover:scale-105 ${
-                isDark
-                  ? "border border-slate-600 hover:border-slate-500"
-                  : "border border-gray-300 hover:border-gray-400"
-              } shadow-lg text-sm`}
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }
 

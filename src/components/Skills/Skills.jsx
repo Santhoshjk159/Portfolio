@@ -99,7 +99,8 @@ function SkillsAndCertificates() {
   ];
 
   return (
-    <div
+    <section
+      id="skills"
       className={`${colors.background} ${colors.text} transition-all duration-500 min-h-screen pt-24 sm:pt-28 lg:pt-32 pb-12`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,48 +233,8 @@ function SkillsAndCertificates() {
             ))}
           </div>
         </div>
-
-        {/* Call to Action - Compact */}
-        <div
-          className={`${colors.card} ${colors.border} p-6 rounded-2xl backdrop-blur-xl text-center shadow-lg hover:shadow-xl transition-all duration-300`}
-        >
-          <h3 className={`text-xl sm:text-2xl font-bold ${colors.text} mb-3`}>
-            Ready to Collaborate
-          </h3>
-          <p
-            className={`${colors.textSecondary} mb-5 max-w-xl mx-auto text-sm sm:text-base`}
-          >
-            Let's work together to create innovative solutions that make a
-            difference.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="/contact"
-              className={`px-6 py-3 bg-gradient-to-r ${colors.primary} text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25`}
-            >
-              Start a Project
-            </a>
-            <a
-              href="/myprojects"
-              className={`px-6 py-3 ${
-                isDark ? "bg-slate-800/80" : "bg-gray-200/80"
-              } backdrop-blur-sm ${
-                colors.text
-              } font-semibold rounded-lg hover:${
-                isDark ? "bg-slate-700/80" : "bg-gray-300/80"
-              } transition-all duration-300 transform hover:scale-105 ${
-                isDark
-                  ? "border border-slate-600 hover:border-slate-500"
-                  : "border border-gray-300 hover:border-gray-400"
-              } shadow-lg`}
-            >
-              View Portfolio
-            </a>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

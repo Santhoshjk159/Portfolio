@@ -15,7 +15,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
-import cauvery from "../asset/cauvery.png"
+import cauvery from "../asset/cauvery.png";
 
 function Experience() {
   const { isDark, colors } = useTheme();
@@ -76,13 +76,7 @@ function Experience() {
       "Designed and developed internal web applications and dashboards to improve operations, enhance data visibility, and reduce reporting time by 40%, supporting faster decision-making.",
       "Identified workflow inefficiencies and contributed to internal tool development that improved process transparency, streamlined operations, and boosted productivity.",
     ],
-    skills: [
-      "React.js",
-      "Node.js",
-      "PHP",
-      "Tailwind CSS",
-      "MySQL",
-    ],
+    skills: ["React.js", "Node.js", "PHP", "Tailwind CSS", "MySQL"],
     color: "from-blue-500 to-indigo-600",
   };
 
@@ -242,7 +236,9 @@ function Experience() {
                               className={`flex items-center space-x-2 ${colors.textMuted} group-hover:text-emerald-400 transition-colors duration-300`}
                             >
                               <Calendar className="w-4 h-4" />
-                              <span className="font-medium">{edu.duration}</span>
+                              <span className="font-medium">
+                                {edu.duration}
+                              </span>
                             </div>
                           )}
                           <div
@@ -511,7 +507,6 @@ function Experience() {
             </div>
           )}
         </div>
-
       </div>
     </section>
   );

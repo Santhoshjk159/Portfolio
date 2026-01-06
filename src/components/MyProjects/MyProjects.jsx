@@ -64,7 +64,7 @@ function MyProjects() {
         "Seaborn",
         "Machine Learning",
       ],
-      githubLink: "https://github.com/Santhoshjk159/DDI", 
+      githubLink: "https://github.com/Santhoshjk159/DDI",
       liveLink: null,
       category: "Machine Learning / Healthcare",
       gradient: "from-indigo-500 to-purple-600",
@@ -242,10 +242,6 @@ function MyProjects() {
           </div>
         </div>
       </div>
-
-      
-
-
     </section>
   );
 }

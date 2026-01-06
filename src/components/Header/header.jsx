@@ -44,8 +44,6 @@ const Header = () => {
       }`}
     >
       <nav className="max-w-[95%] xl:max-w-[1400px] mx-auto flex justify-between items-center px-6 py-3">
-        
-
         {/* Desktop Navigation */}
         <ul
           className={`hidden md:flex space-x-6 lg:space-x-8 text-sm lg:text-base ${colors.textSecondary}`}

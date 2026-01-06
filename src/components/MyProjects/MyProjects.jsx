@@ -5,6 +5,7 @@ import poster from "../asset/poster.png";
 import bmw from "../asset/bmw.png";
 import news from "../asset/news247.png";
 import campuscruze from "../asset/campuscruze.jpg";
+import ddi from "../asset/ddi.png";
 
 function MyProjects() {
   const [currentProject, setCurrentProject] = useState(0);
@@ -50,6 +51,26 @@ function MyProjects() {
     },
     {
       id: 2,
+      title: "Drug–Drug Interaction Severity Prediction",
+      description:
+        "A machine learning project that predicts the severity of drug–drug interactions using molecular and physicochemical properties of drugs. The system leverages data preprocessing, Random Forest classification, and visual analytics to identify potentially harmful drug combinations and improve patient safety.",
+      image: ddi,
+      technologies: [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Machine Learning",
+      ],
+      githubLink: "https://github.com/Santhoshjk159/DDI", 
+      liveLink: null,
+      category: "Machine Learning / Healthcare",
+      gradient: "from-indigo-500 to-purple-600",
+    },
+    {
+      id: 3,
       title: "BookMyWay – Travel Planner",
       description:
         "A comprehensive travel planning application built with ReactJS that allows users to input trip details and view detailed cost breakdowns. Features include itinerary planning, budget tracking, and expense categorization.",
@@ -61,7 +82,7 @@ function MyProjects() {
       gradient: "from-blue-500 to-purple-600",
     },
     {
-      id: 3,
+      id: 4,
       title: "News24X7 – News Dashboard",
       description:
         "A responsive news dashboard application that fetches real-time news from multiple sources and enables users to filter articles by category, search for specific topics, and save favorite articles.",
@@ -222,67 +243,7 @@ function MyProjects() {
         </div>
       </div>
 
-      {/* Design Works Section - Compact with Overlay Button */}
-      <section
-        className={`${colors.background} py-8 px-4 sm:px-6 lg:px-8 ${colors.border} border-t`}
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-6">
-            <h2
-              className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${colors.secondary} bg-clip-text text-transparent mb-3`}
-            >
-              Design Portfolio
-            </h2>
-            <div
-              className={`w-20 h-1 bg-gradient-to-r ${colors.secondary} mx-auto rounded-full mb-3`}
-            ></div>
-            <p className={`${colors.textSecondary} max-w-xl mx-auto text-sm`}>
-              Creative visual design and digital art projects
-            </p>
-          </div>
-
-          {/* Design Portfolio with Overlay Button */}
-          <div className="flex justify-center">
-            <div className="relative group max-w-md w-full">
-              {/* Background glow */}
-              <div
-                className={`absolute -inset-3 bg-gradient-to-r ${colors.primary} opacity-20 blur-xl rounded-2xl group-hover:opacity-30 transition-opacity duration-500`}
-              ></div>
-
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                <img
-                  src={poster}
-                  alt="Design Works Portfolio"
-                  className="w-full h-48 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-
-                {/* Overlay with centered button */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                  <a
-                    href="https://drive.google.com/drive/folders/1JLybGMw84Q1pt69E0as-sc0CXvlWdIMq"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`px-6 py-3 bg-gradient-to-r ${colors.primary} text-white font-bold rounded-xl hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-110 shadow-xl flex items-center space-x-2 backdrop-blur-sm bg-opacity-90`}
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    <span>View Portfolio</span>
-                  </a>
-                </div>
-
-                {/* Bottom text overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-white font-bold text-lg mb-1">
-                    Design Collection
-                  </h3>
-                  <p className="text-gray-200 text-sm">
-                    Explore my creative design work and visual projects
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
 
     </section>

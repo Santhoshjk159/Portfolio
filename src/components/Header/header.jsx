@@ -44,12 +44,7 @@ const Header = () => {
       }`}
     >
       <nav className="max-w-[95%] xl:max-w-[1400px] mx-auto flex justify-between items-center px-6 py-3">
-        {/* Logo with enhanced gradient */}
-        <h1
-          className={`text-xl lg:text-2xl font-bold bg-gradient-to-r ${colors.primary} text-transparent bg-clip-text hover:scale-105 transition-transform duration-300`}
-        >
-          <a href="#home">Santhosh Portfolio</a>
-        </h1>
+        
 
         {/* Desktop Navigation */}
         <ul

@@ -89,43 +89,23 @@ function Experience() {
   const positionsOfResponsibility = [
     {
       id: 1,
-      organization: "Google Developer Group (GDG)",
-      role: "Executive Member, Graphics Team",
-      logo: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F336108949%2F406395333387%2F1%2Foriginal.20220816-061514?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=304%2C0%2C1276%2C1276&s=5c743ea90a8e6940d28c9759069f277e",
+      organization: "Coding Club NIT Andhra Pradesh",
+      role: "Joint Secretary",
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQEHrjcv_BzAgA/company-logo_200_200/B56Zixe0DJHUAI-/0/1755324306327?e=2147483647&v=beta&t=nHjmQJlRXZFIj2YJPlGFTWT4SQq94BMGoooTFleO7es",
       description:
-        "Creating visually engaging content for events and promotions, including video content and digital marketing materials.",
-      skills: [
-        "Graphic Design",
-        "Video Editing",
-        "Event Promotion",
-      ],
+        "Actively involved in problem-solving sessions and collaborative coding activities to strengthen core programming skills.",
+      skills: ["Competitive Programming", "Problem Solving"],
       color: "from-blue-500 to-indigo-600",
     },
+
     {
       id: 2,
-      organization: "Innovation & Entrepreneurship Cell, NIT AP",
-      role: "Executive Member, Technical Team",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJskiyn62Hp65-fTyfcvBS5olXlAusUgwIag&s",
+      organization: "Bhavisya Bharath Club, NIT Andhra Pradesh",
+      role: "Joint Secretary",
+      logo: "https://nitandhra.ac.in/main/images/clubs/clubs/Bhavisyabharat.png",
       description:
-        "Developing innovative tech prototypes and participating in national tech competitions to showcase projects.",
-      skills: [
-        "Technical Development",
-        "Event Management",
-      ],
-      color: "from-emerald-500 to-teal-600",
-    },
-    {
-      id: 3,
-      organization: "Biotechnology Engineering Association (BEA)",
-      role: "Executive Member, Core Team",
-      logo: "https://ugc.production.linktr.ee/7722bba3-e436-4480-9fc3-c6e89fdfce3b_Untitled-design.png?io=true&size=avatar-v3_0",
-      description:
-        "Designing digital content for events and managing social media platforms to enhance the association's digital footprint.",
-      skills: [
-        "Content Creation",
-        "Promtotions",
-        "Brand Design",
-      ],
+        "Contribute to youth-driven initiatives that promote sustainability, innovation, and responsible leadership beyond academics.",
+      skills: ["Leadership", "Collaboration", "Social Impact"],
       color: "from-purple-500 to-pink-600",
     },
   ];
@@ -439,7 +419,7 @@ function Experience() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-6">
                 {positionsOfResponsibility.map((pos, index) => (
                   <div
                     key={pos.id}
